@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  issuerail-server:
+    image: ghcr.io/issuerail/server:latest
+    ports:
+      - "8081:8081"
+  issuerail-web:
+    image: ghcr.io/issuerail/web:latest
+    ports:
+      - "443:443"
+      - "8080:80"
+    depends_on:
+      - issuerail-server
