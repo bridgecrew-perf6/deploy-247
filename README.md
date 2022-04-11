@@ -1,54 +1,31 @@
-# issuerail
+# deploy
 
-[![License](https://img.shields.io/github/license/issuerail/deploy.svg?color=brightgreen)](https://github.com/issuerail/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/issuerail/deploy.svg)](https://github.com/issuerail/deploy/blob/main/LICENSE)
 [![Gitter chat](https://badges.gitter.im/craftslab/issuerail.png)](https://gitter.im/craftslab/issuerail)
 
 
 
 ## Introduction
 
-*issuerail* is the issue tracker written in Rust and Vue.
+*deploy* is the deployment of [issuerail](https://github.com/issuerail).
 
 
 
-## Prerequisites
+## Deploy
 
-- Rust >= 1.59.0
-- Vue >= 3.0.0
-
-
-
-## Run
-
-- **Server**
+- **Docker**
 
 ```bash
-git clone https://github.com/issuerail/server.git --depth 1
-
-cd server
-./server.sh build
-./server.sh run
+docker-compose -f compose.yml pull
+docker-compose -f compose.yml up -d
 ```
 
 
 
-- **Web**
+- **Heroku**
 
 ```bash
-git clone https://github.com/issuerail/web.git --depth 1
-
-cd web
-./web.sh build
-./web.sh run
-```
-
-
-
-## Docker
-
-```bash
-./compose.sh build
-./compose.sh run
+TBD
 ```
 
 
@@ -68,3 +45,5 @@ Project License can be found [here](LICENSE).
 
 
 ## Reference
+
+- [heroku](https://www.heroku.com/)
